@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Create a new account on Broadcaster">
+        
+        <title>Edit Record | Broadcaster</title>
+
+        <!-- <link rel="stylesheet" href="css/style.css"> -->
+        <!-- <link rel="author" href="humans.txt"> -->
+    </head>
+    <body>
+
+    	<h1>Broadcaster</h1>
+
+    	<ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">Records</a></li>
+            <li><a href="">Search</a></li>
+        </ul>
+
+        <h3>Edit Your Incident Record</h3>
+
+    	<div>
+            <form id="f_UpdateIncident" action="#" enctype="multipart/form-data">
+                
+                <div>
+                    <label for="incident_update_Type">Type of Incident</label>
+                    <select name="incident-type" id="incident_update_Type">
+                        <option value="red-flag">Red-flag</option>
+                        <option value="intervention">Intervention</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="incident_update_Title">Title</label>
+                    <input type="text" name="incident-title" id="incident_update_Title" required>
+                </div>
+
+                <div>
+                    <label for="incident_update_Description">Description</label>
+                    <textarea name="incident-description" id="incident_update_Description" cols="30" rows="10"></textarea>
+                </div>
+
+                <div>
+                    <label for="incident_update_Image">Attach Image</label>
+                    <input type="file" name="incident-image" id="incident_update_Image" accept="image/*">
+                </div>
+
+                <button type="submit">Save Updated Incident Record</button>
+
+            </form>   
+        </div>
+        
+        <!-- <script src="js/main.js"></script> -->
+    </body>
+</html>
