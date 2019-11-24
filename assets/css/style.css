@@ -1,3 +1,12 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css?family=Signika&display=swap');
+
+/* Typography */
+h1, h2, h3 {
+	font-family: 'Signika', sans-serif;
+}
+
+/* Page Components */
 .page-wrapper {
 	/* fit to center */
 	width: 50%;
