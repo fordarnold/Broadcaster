@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="Create a new account on Broadcaster">
+        <meta name="description" content="Sign in using your user account details.">
         
         <title>Sign in | Broadcaster</title>
         <!-- Favicon -->
@@ -13,31 +13,39 @@
     </head>
     <body>
 
-    	<h1>Broadcaster</h1>
+        <div class="page-intro">
+            <hgroup>
+                <h1>Broadcaster</h1>
+                <h3>Sign in with your user account</h3>
+            </hgroup>
 
-    	<h3>Sign in with your user account</h3>
-        <p>
-            <small><a href="sign-up.html">(Don't have an account? Sign-up first)</a></small>
-        </p>
-
-    	<div>
-            <form id="f_LoginAccount" action="app/index.html" method="POST">
-                
-                <div>
-                    <label for="signin_Username">Username</label>
-                    <input type="text" name="username" id="signin_Username" required>
-                </div>
-
-                <div>
-                    <label for="signin_Password">Password</label>
-                    <input type="password" name="password" id="signin_Password" required>
-                </div>
-
-                <button type="submit">Sign In</button>
-
-            </form>   
+            <p>
+                <small><a href="sign-up.html">(Don't have an account? Sign-up first)</a></small>
+            </p>
         </div>
-        
+
+        <div class="page-content">
+
+            <div id="sign-in-form">
+                <form id="f_LoginAccount" action="app/index.html" method="POST">
+
+                    <div>
+                        <label for="signin_Username">Username</label>
+                        <input type="text" name="username" id="signin_Username" required>
+                    </div>
+
+                    <div>
+                        <label for="signin_Password">Password</label>
+                        <input type="password" name="password" id="signin_Password" required>
+                    </div>
+
+                    <button type="submit">Sign In</button>
+
+                </form>   
+            </div>
+
+        </div>
+
         <!-- <script src="js/main.js"></script> -->
     </body>
 </html>

@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="Create a new account on Broadcaster">
+        <meta name="description" content="User's profile page.">
         
         <title>[User]'s Profile | Broadcaster</title>
         <!-- Favicon -->
@@ -13,41 +13,51 @@
     </head>
     <body>
 
-    	<h1>Broadcaster</h1>
+        <div class="page-intro">
+            <hgroup>
+                <h1>Broadcaster</h1>
+                <h3>User Profile</h3>
+            </hgroup>
 
-    	<ul>
-            <li><a href="">Home</a></li>
-            <li class="active"><a href="">Records</a></li>
-            <li><a href="">Search</a></li>
-        </ul>
-
-        <h3>User's Data Summary</h3>
-
-    	<div>
-            
             <ul>
-                <li>Resolved: 12</li>
-                <li>Pending: 12</li>
-                <li>Rejected: 12</li>
+                <li><a href="">Home</a></li>
+                <li><a href="records.html">Records</a></li>
+                <li class="active"><a href="#">Profile</a></li>
+                <li><a href="">Search</a></li>
             </ul>
-
         </div>
 
-        <h3>User's Records</h3>
+        <div class="page-content">
 
-        <div>
-            
-            <div class="incident-record-item">
-                <h6 class="incident-type">Type: Red-flag / Intervention</h6>
-                <p class="incident-title">Sample Title: Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            <h3>User's Data Summary</h3>
+
+        	<div>
+                
                 <ul>
-                    <li><a href="#">show description</a></li>
-                    <li><a href="edit-record.html">edit</a></li>
-                    <li><a href="#" class="delete-item">delete</a></li>
+                    <li>Resolved: 12</li>
+                    <li>Pending: 12</li>
+                    <li>Rejected: 12</li>
                 </ul>
-                <div class="incident-description">
-                    <p></p>
+
+            </div>
+
+            <h3>User's Records</h3>
+
+            <div>
+                
+                <div class="incident-record-item">
+                    <h6 class="incident-type">Type: Red-flag / Intervention</h6>
+                    <p class="incident-title">Sample Title: Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    <ul>
+                        <li><a href="#">show description</a></li>
+                        <li><a href="edit-record.html">edit</a></li>
+                        <li><a href="#" class="delete-item">delete</a></li>
+                    </ul>
+                    <div class="incident-description">
+                        <p></p>
+                    </div>
                 </div>
+
             </div>
 
         </div>

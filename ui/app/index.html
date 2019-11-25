@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="Create a new account on Broadcaster">
+        <meta name="description" content="Create a new incident record.">
         
         <title>Home | Broadcaster</title>
         <!-- Favicon -->
@@ -13,50 +13,64 @@
     </head>
     <body>
 
-    	<h1>Broadcaster</h1>
+        <div class="page-intro">
+            <hgroup>
+                <h1>Broadcaster</h1>
+                <h3>Welcome, User</h3>
+            </hgroup>
 
-    	<ul>
-            <li class="active"><a href="">Home</a></li>
-            <li><a href="records.html">Records</a></li>
-            <li><a href="">Search</a></li>
-        </ul>
+            <ul>
+                <li class="active"><a href="">Home</a></li>
+                <li><a href="records.html">Records</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="">Search</a></li>
+            </ul>
+        </div>
 
-        <h3>Welcome, User</h3>
+        <div class="page-content">
 
-    	<div>
-            <h4>Create a new incident record</h4>
+        	<div>
+                <h4>Create a new incident record</h4>
 
-            <p>
-                Incidents include:
-                <ul>
-                    <li>Red-flag = an incident linked to corruption</li>
-                    <li>Intervention = an incident calling for a government agency to intervene</li>
-                </ul>
-            </p>
+                <p>
+                    Incidents include:
+                    <ul>
+                        <li>Red-flag = an incident linked to corruption</li>
+                        <li>Intervention = an incident calling for a government agency to intervene</li>
+                    </ul>
+                </p>
 
-            <form id="f_CreateIncident" action="#">
-                
-                <div>
-                    <label for="incident_Type">Choose Type of Incident</label>
-                    <select name="incident-type" id="incident_Type">
-                        <option value="red-flag">Red-flag</option>
-                        <option value="intervention">Intervention</option>
-                    </select>
+                <div id="create-incident-form">
+
+                    <form id="f_CreateIncident" action="#">
+                        
+                        <div>
+                            <label for="incident_Type">Choose Type of Incident</label>
+                            <select name="incident-type" id="incident_Type">
+                                <option value="red-flag">Red-flag</option>
+                                <option value="intervention">Intervention</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label for="incident_Title">Title</label>
+                            <input type="text" name="incident-title" id="incident_Title" required>
+                        </div>
+
+                        <div>
+                            <label for="incident_Description">Description</label>
+                            <textarea name="incident-description" id="incident_Description" cols="30" rows="10" placeholder="Explain this incident clearly"></textarea>
+                        </div>
+
+                        <div>
+                            <button type="submit">Submit Incident Record</button>
+                        </div>
+
+                    </form> 
+
                 </div>
+            </div>
 
-                <div>
-                    <label for="incident_Title">Title</label>
-                    <input type="text" name="incident-title" id="incident_Title" required>
-                </div>
-
-                <div>
-                    <label for="incident_Description">Description</label>
-                    <textarea name="incident-description" id="incident_Description" cols="30" rows="10" placeholder="Explain this incident clearly"></textarea>
-                </div>
-
-                <button type="submit">Submit Incident Record</button>
-
-            </form>   
         </div>
         
         <!-- <script src="js/main.js"></script> -->

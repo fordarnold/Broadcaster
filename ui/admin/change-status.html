@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="Create a new account on Broadcaster">
+        <meta name="description" content="Change the status of an incident record.">
         
         <title>Change Status | Broadcaster</title>
         <!-- Favicon -->
@@ -13,31 +13,43 @@
     </head>
     <body>
 
-    	<h1>Broadcaster</h1>
+    	<div class="page-intro">
+            <hgroup>
+                <h1>Broadcaster</h1>
+                <h3>Change Status of Incident Record</h3>
+            </hgroup>
 
-    	<ul>
-            <li><a href="">Home</a></li>
-            <li><a href="">Records</a></li>
-            <li><a href="">Search</a></li>
-        </ul>
+            <ul>
+                <li><a href="records.html">Back to Records</a></li>
+            </ul>
+        </div>
 
-        <h3>Change Status of Incident Record</h3>
+        <div class="page-content">
 
-    	<div>
-            <form id="f_UpdateIncident" action="#">
-                
-                <div>
-                    <label for="incident_update_Status">Status</label>
-                    <select name="incident-status" id="incident_update_Status">
-                        <option value="under investigation">Under Investigation</option>
-                        <option value="resolved">Resolved</option>
-                        <option value="rejected">Rejected</option>
-                    </select>
-                </div>
+            <div>
+                <p>Incident ID: #100897</p>
+                <p>Incident Type: Red-flag</p>
+            </div>
 
-                <button type="submit">Save Updated Status</button>
+        	<div>
+                <form id="f_UpdateIncidentStatus" action="#">
+                    
+                    <div>
+                        <label for="incident_update_Status">Status</label>
+                        <select name="incident-status" id="incident_update_Status">
+                            <option value="under investigation">Under Investigation</option>
+                            <option value="resolved">Resolved</option>
+                            <option value="rejected">Rejected</option>
+                        </select>
+                    </div>
 
-            </form>   
+                    <div>
+                        <button type="submit">Save Updated Status</button>
+                    </div>
+
+                </form>   
+            </div>
+
         </div>
         
         <!-- <script src="js/main.js"></script> -->
