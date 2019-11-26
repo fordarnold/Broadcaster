@@ -25,7 +25,7 @@
 
                 <nav>
                     <ul>
-                        <li class="active"><a href="">Home</a></li>
+                        <li class="active"><a href="./">Home</a></li>
                         <li><a href="records.html">My Records</a></li>
                         <li><a href="profile.html">Profile</a></li>
                         <li><a href="search.html">Search</a></li>
@@ -52,31 +52,33 @@
                         </p>
                     </div>
 
-                    <form id="f_CreateIncident" action="#">
+                    <div id="create-incident-form">
+                        <form id="f_CreateIncident" action="#">
 
-                        <div class="input-group">
-                            <label for="incident_Type">Choose Type of Incident</label>
-                            <select name="incident-type" id="incident_Type">
-                                <option value="red-flag">Red-flag</option>
-                                <option value="intervention">Intervention</option>
-                            </select>
-                        </div>
+                            <div class="input-group">
+                                <label for="incident_Type">Choose Type of Incident</label>
+                                <select name="incident-type" id="incident_Type">
+                                    <option value="red-flag">Red-flag</option>
+                                    <option value="intervention">Intervention</option>
+                                </select>
+                            </div>
 
-                        <div class="input-group">
-                            <label for="incident_Title">Title</label>
-                            <input type="text" name="incident-title" id="incident_Title" required>
-                        </div>
+                            <div class="input-group">
+                                <label for="incident_Title">Title</label>
+                                <input type="text" name="incident-title" id="incident_Title" required>
+                            </div>
 
-                        <div class="input-group">
-                            <label for="incident_Description">Description</label>
-                            <textarea name="incident-description" id="incident_Description" cols="30" rows="10" placeholder="Explain this incident clearly"></textarea>
-                        </div>
+                            <div class="input-group">
+                                <label for="incident_Description">Description</label>
+                                <textarea name="incident-description" id="incident_Description" cols="30" rows="10" placeholder="Explain this incident clearly"></textarea>
+                            </div>
 
-                        <div>
-                            <button type="submit" class="btn">Submit Incident Record</button>
-                        </div>
+                            <div>
+                                <button type="submit" class="btn">Submit Incident Record</button>
+                            </div>
 
-                    </form> 
+                        </form> 
+                    </div>
 
                 </div>
 
