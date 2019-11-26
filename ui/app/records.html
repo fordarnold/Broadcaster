@@ -3,42 +3,68 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="Create a new account on Broadcaster">
+        <meta name="description" content="List of all incident records created by me.">
         
         <title>My Records | Broadcaster</title>
         <!-- Favicon -->
-        <link rel="shortcut icon" type="image/png" href="/assets/img/favicon.png">
+        <link rel="shortcut icon" type="image/png" href="../../assets/img/favicon.png">
         <!-- CSS -->
-        <link rel="stylesheet" href="/assets/css/style.css">
+        <link rel="stylesheet" href="../../assets/css/style.css">
     </head>
     <body>
 
-    	<h1>Broadcaster</h1>
+        <header>
+            <div class="container">
 
-    	<ul>
-            <li><a href="">Home</a></li>
-            <li class="active"><a href="">Records</a></li>
-            <li><a href="">Search</a></li>
-        </ul>
-
-        <h3>Your List of Incident Records</h3>
-
-    	<div>
-            
-            <div class="incident-record-item">
-                <h6 class="incident-type">Type: Red-flag / Intervention</h6>
-                <p class="incident-title">Sample Title: Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                <ul>
-                    <li><a href="#">show description</a></li>
-                    <li><a href="edit-record.html">edit</a></li>
-                    <li><a href="#" class="delete-item">delete</a></li>
-                </ul>
-                <div class="incident-description">
-                    <p></p>
+                <div id="brand">
+                    <a href="./">
+                        <img src="../../assets/img/logo-Broadcaster-64x64.png" alt="Broadcaster logo">
+                        <h1>Broadcaster</h1>
+                    </a>
                 </div>
-            </div>
 
-        </div>
+                <nav>
+                    <ul>
+                        <li><a href="./">Home</a></li>
+                        <li class="active"><a href="records.html">My Records</a></li>
+                        <li><a href="profile.html">Profile</a></li>
+                        <li><a href="search.html">Search</a></li>
+                    </ul>
+                </nav>
+
+            </div>
+        </header>
+
+        <section id="page-content">
+            <div class="container">
+
+                <div class="box-50 centered">
+
+                    <div id="intro">
+                        <h1>Your List of Incident Records</h1>
+                    </div>
+
+                    <div class="card">
+                    
+                        <div class="incident-record-item">
+                            <h6 class="incident-type">Type: Red-flag / Intervention</h6>
+                            <p class="incident-title">Sample Title: Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                            <ul>
+                                <li><a href="#">show description</a></li>
+                                <li><a href="edit-record.html">edit</a></li>
+                                <li><a href="#" class="delete-item">delete</a></li>
+                            </ul>
+                            <div class="incident-description">
+                                <p></p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
         
         <!-- <script src="js/main.js"></script> -->
     </body>
