@@ -3,47 +3,64 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="Create a new incident record.">
+        <meta name="description" content="Search for user profiles and incident records.">
         
         <title>Search | Broadcaster</title>
         <!-- Favicon -->
-        <link rel="shortcut icon" type="image/png" href="/assets/img/favicon.png">
+        <link rel="shortcut icon" type="image/png" href="../../assets/img/favicon.png">
         <!-- CSS -->
-        <link rel="stylesheet" href="/assets/css/style.css">
+        <link rel="stylesheet" href="../../assets/css/style.css">
     </head>
     <body>
 
-        <div class="page-intro">
-            <hgroup>
-                <h1>Broadcaster</h1>
-                <h3>Search Incident Records</h3>
-            </hgroup>
+        <header>
+            <div class="container">
 
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="records.html">Records</a></li>
-                <li><a href="profile.html">Profile</a></li>
-                <li class="active"><a href="#">Search</a></li>
-            </ul>
-        </div>
+                <div id="brand">
+                    <a href="./">
+                        <img src="../../assets/img/logo-Broadcaster-64x64.png" alt="Broadcaster logo">
+                        <h1>Broadcaster</h1>
+                    </a>
+                </div>
 
-        <div class="page-content">
+                <nav>
+                    <ul>
+                        <li><a href="./">Home</a></li>
+                        <li><a href="records.html">My Records</a></li>
+                        <li><a href="profile.html">Profile</a></li>
+                        <li class="active"><a href="search.html">Search</a></li>
+                    </ul>
+                </nav>
 
-        	<div>
-                
-                <form action="">
-                    <div>
-                        <label for="incident_Title">Enter keywords to search</label>
-                        <input type="text" name="incident-search" id="incident_Search" required>
-                    </div>
-
-                    <div>
-                        <button type="submit">Search</button>
-                    </div>
-                </form>
             </div>
+        </header>
 
-        </div>
+        <section id="page-content">
+            <div class="container">
+
+                <div class="box-50 centered">
+
+                    <div id="intro">
+                        <h1>Search Broadcaster</h1>
+                    </div>
+
+                    <div id="search-form">
+                        <form action="">
+                            <div class="input-group">
+                                <label for="incident_Title">Enter keywords to search</label>
+                                <input type="text" name="incident-search" id="incident_Search" required>
+                            </div>
+
+                            <div>
+                                <button type="submit" class="btn">Search</button>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
         
         <!-- <script src="js/main.js"></script> -->
     </body>
