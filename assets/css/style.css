@@ -16,11 +16,11 @@
 @import url('https://fonts.googleapis.com/css?family=Signika&display=swap');
 
 /**
- * -------------
+ * ----------------------------------------------------
  *
  * GLOBAL STYLES
  *
- * -------------
+ * ----------------------------------------------------
  */
 
 /* Common Page Elements */
@@ -37,7 +37,19 @@ h1, h2, h3 {
 	font-family: 'Signika', serif;
 }
 
-/* Page Components */
+/* Helper Style Classes */
+.text-center {
+	text-align: center;
+}
+
+/**
+ * ----------------------------------------------------
+ *
+ * RE-USABLE COMPONENTS
+ *
+ * ----------------------------------------------------
+ */
+
 .page-wrapper {
 	/* fit to center */
 	width: 50%;
@@ -52,10 +64,96 @@ h1, h2, h3 {
 	overflow: hidden;
 }
 
-/* Helper Style Classes */
-.text-center {
-	text-align: center;
+.box-50 {
+	width: 50%;
 }
+
+.box-50.centered {
+	margin: auto;
+}
+
+/* Buttons */
+/* https://codepen.io/finnhvman/pen/MQyJxV */
+.btn {
+	position: relative;
+    display: inline-block;
+    box-sizing: border-box;
+    border: none;
+	border-radius: 4px;
+    padding: 0 16px;
+    min-width: 64px;
+    height: 36px;
+    vertical-align: middle;
+    text-align: center;
+    text-overflow: ellipsis;
+    text-transform: uppercase;
+    background-color: #D78A42;
+    color: #FFF;
+    font-family: "Signika", sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 36px;
+    overflow: hidden;
+    outline: none;
+    cursor: pointer;
+    transition: box-shadow 0.2s;
+}
+
+.btn::-moz-focus-inner {
+    border: none;
+}
+
+.btn::before {
+	content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgb(255, 255, 255);
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.btn::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    border-radius: 50%;
+    padding: 50%;
+    width: 32px; /* Safari */
+    height: 32px; /* Safari */
+    background-color: rgb( 255, 255, 255);
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1);
+    transition: opacity 1s, transform 0.5s;
+}
+
+.btn:hover,
+.btn:focus {
+    box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+.btn:hover::before {
+    opacity: 0.08;
+}
+
+.btn:focus::before {
+    opacity: 0.24;
+}
+
+.btn:hover:focus::before {
+    opacity: 0.3;
+}
+
+/**
+ * ----------------------------------------------------
+ *
+ * PAGE AREAS
+ *
+ * ----------------------------------------------------
+ */
 
 /*-------------------------- Page Header -------------------------- */
 
@@ -114,6 +212,24 @@ header nav ul li a:hover, header nav .active a {
 	color: #D78A42;
 }
 
+/*-------------------------- Page Content -------------------------- */
+
+#page-content {
+	margin-top: 20px;
+}
+
+/*-------------------------- Page Footer -------------------------- */
+
+footer {
+	margin-top: 20px;
+	padding: 10px;
+	background: #C5D4F1;
+}
+
+footer #footer-copyright {
+	font-weight: bold;
+}
+
 /*-------------------------- Showcase -------------------------- */
 
 #showcase {
@@ -160,14 +276,31 @@ header nav ul li a:hover, header nav .active a {
 	width: 80px;
 }
 
-/*-------------------------- Page Header -------------------------- */
+/**
+ * -------------
+ *
+ * <FORM> STYLES
+ *
+ * -------------
+ */
 
-footer {
-	margin-top: 20px;
-	padding: 10px;
-	background: #C5D4F1;
+form {
+	padding: 20px 0;
 }
 
-footer #footer-copyright {
-	font-weight: bold;
+form .input-group {
+	margin-bottom: 20px;
+}
+
+form .input-group label {
+	display: block;
+	margin-bottom: 5px;
+}
+
+form .input-group input {
+	width: 100%;
+	line-height: 30px;
+	border: 0;
+	border-bottom: 2px solid #CFD974;
+	text-indent: 5px;
 }

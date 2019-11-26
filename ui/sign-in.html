@@ -13,38 +13,63 @@
     </head>
     <body>
 
-        <div class="page-intro">
-            <hgroup>
-                <h1>Broadcaster</h1>
-                <h3>Sign in with your user account</h3>
-            </hgroup>
+        <header>
+            <div class="container">
+                
+                <div id="brand">
+                    <a href="./">
+                        <img src="../assets/img/logo-Broadcaster-64x64.png" alt="Broadcaster logo">
+                        <h1>Broadcaster</h1>
+                    </a>
+                </div>
 
-            <p>
-                <small><a href="sign-up.html">(Don't have an account? Sign-up first)</a></small>
-            </p>
-        </div>
+                <nav>
+                    <ul>
+                        <li><a href="sign-up.html">Create Account</a></li>
+                        <li class="active"><a>Sign In</a></li>
+                    </ul>
+                </nav>
 
-        <div class="page-content">
-
-            <div id="sign-in-form">
-                <form id="f_LoginAccount" action="app/index.html" method="POST">
-
-                    <div>
-                        <label for="signin_Username">Username</label>
-                        <input type="text" name="username" id="signin_Username" required>
-                    </div>
-
-                    <div>
-                        <label for="signin_Password">Password</label>
-                        <input type="password" name="password" id="signin_Password" required>
-                    </div>
-
-                    <button type="submit">Sign In</button>
-
-                </form>   
             </div>
+        </header>
 
-        </div>
+        <section id="page-content">
+            <div class="container">
+
+                <div class="box-50 centered">
+
+                    <div id="intro">
+                        <h1>Sign In With Your User Account</h1>
+                        <p>
+                            <small><a href="sign-up.html">(Don't have an account? Sign-up first)</a></small>
+                        </p>
+                    </div>
+
+                    <div id="sign-in-form">
+                        <form id="f_LoginAccount" action="app/" method="POST">
+
+                            <div class="input-group">
+                                <label for="signin_Username">Username</label>
+                                <input type="text" name="username" id="signin_Username" required>
+                            </div>
+
+                            <div class="input-group">
+                                <label for="signin_Password">Password</label>
+                                <input type="password" name="password" id="signin_Password" required>
+                            </div>
+
+                            <div>
+                                <button type="submit" class="btn">Sign In</button>
+                            </div>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
 
         <!-- <script src="js/main.js"></script> -->
     </body>
