@@ -143,6 +143,31 @@ header nav ul li a:hover, header nav .active a {
 	font-size: 1.7em;
 }
 
+/*-------------------------- Features -------------------------- */
+
+#features {
+	margin-top: 20px;
+}
+
 #features .box {
+	width: 31.4%;
 	float: left;
+	padding: 10px;
+	text-align: center;
+}
+
+#features .box img {
+	width: 80px;
+}
+
+/*-------------------------- Page Header -------------------------- */
+
+footer {
+	margin-top: 20px;
+	padding: 10px;
+	background: #C5D4F1;
+}
+
+footer #footer-copyright {
+	font-weight: bold;
 }
