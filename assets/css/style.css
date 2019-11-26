@@ -1,9 +1,40 @@
+/**
+ * Color Palette
+ * -------------
+ * - https://color.adobe.com/avo---bright-color-theme-10085604
+ * - https://paletton.com/#uid=50x0u0kmbqZcIEoi0uMqdnatPiq
+ * 
+ * #C5D4F1 (#6C88BE, #304F8D, #0C275D)
+ * #D7E0F2
+ * #CFD974
+ * #D2DC96
+ * #D78A42 (#934C0A, #B96A21, #F5AD6B, #FFCA9A)
+ *
+ */
+
 /* Google Fonts */
 @import url('https://fonts.googleapis.com/css?family=Signika&display=swap');
 
+/**
+ * -------------
+ *
+ * GLOBAL STYLES
+ *
+ * -------------
+ */
+
+/* Common Page Elements */
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #FFF;
+	background-image: url("../img/bg-pattern-clean-gray-paper.png");
+	font-family: Arial, Helvetica, sans-serif;
+}
+
 /* Typography */
 h1, h2, h3 {
-	font-family: 'Signika', sans-serif;
+	font-family: 'Signika', serif;
 }
 
 /* Page Components */
@@ -15,6 +46,103 @@ h1, h2, h3 {
 	padding-top: 50px;
 }
 
+.container {
+	width: 80%;
+	margin: auto;
+	overflow: hidden;
+}
+
+/* Helper Style Classes */
 .text-center {
 	text-align: center;
+}
+
+/*-------------------------- Page Header -------------------------- */
+
+header {
+	background: #CFD974;
+	color: #934C0A;
+	padding-top: 15px;
+	min-height: 70px;
+	border-bottom: #D78A42 4px solid;
+	text-transform: uppercase;
+}
+
+header a {
+	color: #934C0A;
+	text-decoration: none;
+}
+
+header #brand {
+	text-transform: uppercase;
+}
+
+header #brand img, header #brand h1 {
+	float: left;
+}
+
+header #brand img {
+	padding-right: 20px;
+	width: 48px;
+	height: 48px;
+}
+
+header #brand h1 {
+	margin: 0;
+	margin-top: 8px;
+}
+
+header nav {
+	float: right;
+	margin-top: 18px;
+	font-family: 'Signika', serif;
+
+}
+
+header nav ul {
+	margin: 0;
+	padding: 0;
+}
+
+header nav ul li {
+	float: left;
+	display: inline;
+	padding: 0 10px;
+}	
+
+header nav ul li a:hover, header nav .active a {
+	color: #D78A42;
+}
+
+/*-------------------------- Showcase -------------------------- */
+
+#showcase {
+	min-height: 350px;
+	background: url('../img/bg-showcase.jpg') no-repeat 0 -60px;
+	background-size: cover;
+
+	text-align: center;
+}
+
+#showcase hgroup {
+	width: 80%;
+	margin: auto;
+	margin-top: 58px;
+	padding: 15px 0 30px 0;
+	border-radius: 5px;
+	background: #D7E0F2;
+	opacity: 0.7;
+	color: #934C0A;
+}
+
+#showcase hgroup h1 {
+	font-size: 2.5em;
+}
+
+#showcase hgroup h3 {
+	font-size: 1.7em;
+}
+
+#features .box {
+	float: left;
 }
