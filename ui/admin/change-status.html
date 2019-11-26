@@ -5,53 +5,69 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="Change the status of an incident record.">
         
-        <title>Change Status | Broadcaster</title>
+        <title>Change Record Status | Broadcaster</title>
         <!-- Favicon -->
-        <link rel="shortcut icon" type="image/png" href="/assets/img/favicon.png">
+        <link rel="shortcut icon" type="image/png" href="../../assets/img/favicon.png">
         <!-- CSS -->
-        <link rel="stylesheet" href="/assets/css/style.css">
+        <link rel="stylesheet" href="../../assets/css/style.css">
     </head>
     <body>
 
-    	<div class="page-intro">
-            <hgroup>
-                <h1>Broadcaster</h1>
-                <h3>Change Status of Incident Record</h3>
-            </hgroup>
+        <header>
+            <div class="container">
 
-            <ul>
-                <li><a href="records.html">Back to Records</a></li>
-            </ul>
-        </div>
+                <div id="brand">
+                    <a href="./">
+                        <img src="../../assets/img/logo-Broadcaster-64x64.png" alt="Broadcaster logo">
+                        <h1>Broadcaster</h1>
+                    </a>
+                </div>
 
-        <div class="page-content">
+                <nav>
+                    <ul>
+                        <li><a href="records.html">Back to Records</a></li>
+                    </ul>
+                </nav>
 
-            <div>
-                <p>Incident ID: #100897</p>
-                <p>Incident Type: Red-flag</p>
             </div>
+        </header>
 
-        	<div>
-                <form id="f_UpdateIncidentStatus" action="#">
-                    
-                    <div>
-                        <label for="incident_update_Status">Status</label>
-                        <select name="incident-status" id="incident_update_Status">
-                            <option value="under investigation">Under Investigation</option>
-                            <option value="resolved">Resolved</option>
-                            <option value="rejected">Rejected</option>
-                        </select>
+        <section id="page-content">
+            <div class="container">
+
+                <div class="box-50 centered">
+
+                    <div id="intro">
+                        <h1>Change Status of Incident Record</h1>
+
+                        <p>Incident ID: #100897</p>
+                        <p>Incident Type: Red-flag</p>
                     </div>
 
-                    <div>
-                        <button type="submit">Save Updated Status</button>
+                    <div id="change-status-form">
+                        <form id="f_UpdateIncidentStatus" action="#">
+                            
+                            <div class="input-group">
+                                <label for="incident_update_Status">Status</label>
+                                <select name="incident-status" id="incident_update_Status">
+                                    <option value="under investigation">Under Investigation</option>
+                                    <option value="resolved">Resolved</option>
+                                    <option value="rejected">Rejected</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <button type="submit" class="btn">Save Updated Status</button>
+                            </div>
+
+                        </form>   
                     </div>
 
-                </form>   
-            </div>
+                </div>
 
-        </div>
-        
+            </div>
+        </section>
+
         <!-- <script src="js/main.js"></script> -->
     </body>
 </html>
