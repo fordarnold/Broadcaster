@@ -1,27 +1,20 @@
+// import the Express framework
 const express = require("express");
-
+// create the Express app
 const app = express();
-
-app.use(express.json());
-
-app.get("/", (req, res) => {
-  res.json({ status: "success", message: "Welcome To Testing API" });
-});
-
-app.post("/add", (req, res) => {
-  const { num1, num2 } = req.body;
-  const add = (num1, num2) => {
-    return num1 + num2;
-  };
-  res.json({
-    status: "success",
-    result: "Welcome To Testing API",
-    result: add(num1, num2)
-  });
-});
-
+// specify our port
 const PORT = process.env.PORT || 3000;
 
-app.listen(PORT, () => console.log(`App listening on port ${PORT}`));
+// default endpoint
+// app.get('/', (req, res) => {
+//     res.send('Welcome to Broadcaster API Server');
+// });
+app.get('/', (req, res) => {
+    res.status(200).json({ 
+    	status: 200,
+    	message: 'Broadcaster API Server welcomes you!'
+    });
+});
 
-module.exports = app;
+// start the server, on specified port
+app.listen(PORT, () => console.log(`Broadcaster API Server is listening on port ${PORT} ...`))
