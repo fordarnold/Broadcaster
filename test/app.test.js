@@ -7,7 +7,7 @@ const { expect } = chai;
 chai.use(chaiHttp);
 
 /**
- * TEST SUITES AND TEST CASES
+ * TEST SUITES AND TEST CASES: COMMON API ROUTES & ENDPOINTS
  *
  * ~https://www.robinwieruch.de/node-js-testing-mocha-chai
  * -----------------------------------------------------------------
