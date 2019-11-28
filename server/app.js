@@ -1,8 +1,8 @@
-import express from 'express'; // Express web framework
-import bodyParser from 'body-parser'; // Handle HTTP POST requests with 'req.body' in Express framework (~https://stackoverflow.com/questions/38306569/what-does-body-parser-do-with-express)
+import express from "express"; // Express web framework
+import bodyParser from "body-parser"; // Handle HTTP POST requests with 'req.body' in Express framework (~https://stackoverflow.com/questions/38306569/what-does-body-parser-do-with-express)
 // const joi = require('joi'); // Data validation library for JS
 
-import routes from './routes/app-routes'; // Import API routes
+import routes from "./routes/routes.v1"; // Import API routes (v1)
 
 const app = express(); // Create the Express app server
 const PORT = process.env.PORT || 3000; // Specify the server port
@@ -12,7 +12,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use('/assets/uploads', express.static('uploads'));
 
 /**
- * API ROUTES & END-POINTS
+ * COMMON API ROUTES & END-POINTS
  * -------------------------------------------------------------------
  */
 
@@ -23,7 +23,7 @@ app.get('/', (req, res) => {
 
     res.status(200).json({ 
     	status: 200,
-    	message: 'Broadcaster API Server welcomes you!'
+    	message: "Broadcaster API Server welcomes you!"
     });
     
 });
@@ -33,7 +33,7 @@ app.use((req, res) => {
 
     res.status(404).json({ 
     	status: 404,
-    	error: 'Endpoint not found' 
+    	error: "API endpoint was not found" 
     });
 
 });
