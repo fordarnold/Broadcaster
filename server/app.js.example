@@ -1,3 +1,5 @@
+/* Resource: https://dev.to/easybuoy/testing-node-api-with-mocha-chai-248b */
+
 const express = require("express");
 
 const app = express();
