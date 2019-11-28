@@ -39,6 +39,6 @@ app.use((req, res) => {
 });
 
 // start the server, on specified port
-app.listen(PORT, () => console.log(`Broadcaster API Server is listening on port ${PORT} ...`));
+const server = app.listen(PORT, () => console.log(`Broadcaster API Server is listening on port ${PORT} ...`));
 
-export default app;
+export default server;
