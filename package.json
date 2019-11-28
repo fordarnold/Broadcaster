@@ -4,7 +4,7 @@
   "description": "Report corruption and other incidents that need government intervention.",
   "main": "index.js",
   "scripts": {
-    "test": "mocha",
+    "test": "mocha --require @babel/register",
     "start": "npm run prod",
     "server": "nodemon --exec babel-node ./server/app.js",
     "server:prod": "node ./dist/app.js",
@@ -32,6 +32,7 @@
     "@babel/core": "^7.7.4",
     "@babel/node": "^7.7.4",
     "@babel/preset-env": "^7.7.4",
+    "@babel/register": "^7.7.4",
     "chai": "^4.2.0",
     "chai-http": "^4.3.0",
     "eslint": "^6.7.1",
