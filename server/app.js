@@ -1,11 +1,16 @@
 // import the Express framework
 const express = require("express");
-// create the Express app
+// // import joi, data validation library for JS
+// const joi = require('joi');
+// // import app routes
+// import v1Routes from './v1/routes/appRoutes';
+
+// create the Express app server
 const app = express();
-// specify our port
+// specify the server port
 const PORT = process.env.PORT || 3000;
 
-// default endpoint
+// starting (landing) endpoint
 // app.get('/', (req, res) => {
 //     res.send('Welcome to Broadcaster API Server');
 // });
@@ -17,4 +22,4 @@ app.get('/', (req, res) => {
 });
 
 // start the server, on specified port
-app.listen(PORT, () => console.log(`Broadcaster API Server is listening on port ${PORT} ...`))
+app.listen(PORT, () => console.log(`Broadcaster API Server is listening on port ${PORT} ...`));
