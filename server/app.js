@@ -9,10 +9,16 @@ const PORT = process.env.PORT || 3000; // Specify the server port
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(routes);
-app.use('/uploads', express.static('uploads'));
+app.use('/assets/uploads', express.static('uploads'));
 
-// default (landing) endpoint
+/**
+ * API ROUTES & END-POINTS
+ * -------------------------------------------------------------------
+ */
+
+app.use(routes);
+
+// Default (landing) route
 app.get('/', (req, res) => {
 
     res.status(200).json({ 
@@ -20,6 +26,16 @@ app.get('/', (req, res) => {
     	message: 'Broadcaster API Server welcomes you!'
     });
     
+});
+
+// 404 error route
+app.use((req, res) => {
+
+    res.status(404).json({ 
+    	status: 404,
+    	error: 'Endpoint not found' 
+    });
+
 });
 
 // start the server, on specified port
