@@ -2,7 +2,7 @@ import express from "express"; // Express web framework
 import bodyParser from "body-parser"; // Handle HTTP POST requests with 'req.body' in Express framework (~https://stackoverflow.com/questions/38306569/what-does-body-parser-do-with-express)
 // const joi = require('joi'); // Data validation library for JS
 
-import routes from "./routes/routes.v1"; // Import API routes (v1)
+import routes from "./routes/routes-v1"; // Import API routes (v1)
 
 const app = express(); // Create the Express app server
 const PORT = process.env.PORT || 3000; // Specify the server port
