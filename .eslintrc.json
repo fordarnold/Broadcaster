@@ -2,7 +2,8 @@
     "env": {
         "browser": true,
         "es6": true,
-        "node": true
+        "node": true,
+        "mocha": true
     },
     "extends": [
         "airbnb-base"
@@ -15,6 +16,19 @@
         "ecmaVersion": 2018,
         "sourceType": "module"
     },
+    "plugins": [
+        "import"
+    ],
     "rules": {
+        "import/no-unresolved": 2,
+        "import/named": 2,
+        "import/default": 2,
+        "import/namespace": 2,
+        "import/no-restricted-paths": 2,
+        "import/no-self-import": 2,
+        "import/no-cycle": 2,
+        "import/no-useless-path-segments": 1,
+        "import/no-unused-modules": [1, {"missingExports": true}],
+        "import/first": 1
     }
 }
