@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/fordarnold/Broadcaster.svg?branch=develop)](https://travis-ci.com/fordarnold/Broadcaster)
+
 # Broadcaster
 
 Report corruption and other incidents that need government intervention.
