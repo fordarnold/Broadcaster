@@ -28,7 +28,7 @@ app.get('/', (req, res) => {
     
 });
 
-// 404 error route
+// 404 error (missing) route
 app.use((req, res) => {
 
     res.status(404).json({ 
