@@ -1,5 +1,5 @@
 import User from '../models/User';
-import Authenticate from '../helpers/authentication';
+import Authenticate from '../helpers/auth';
 
 class UserController {
 
@@ -44,7 +44,7 @@ class UserController {
         const hasAccount = User.userExists(req.body.email);
 
         if (hasAccount) {
-            const passwordsMatch = Auth.checkPassword(
+            const passwordsMatch = Authenticate.checkPassword(
                 req.body.password,
                 hasAccount.password
             );
@@ -54,7 +54,7 @@ class UserController {
                     status: 200,
                     message: 'User is successfully logged in',
                     data: {
-                        token: Auth.generateToken(hasAccount.email, hasAccount.id, hasAccount.isAdmin),
+                        token: Authenticate.generateToken(hasAccount.email, hasAccount.id, hasAccount.isAdmin),
                         firstname: hasAccount.firstname,
                         lastname: hasAccount.lastname,
                         email: hasAccount.email,

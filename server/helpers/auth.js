@@ -7,7 +7,7 @@ dotenv.config();
 class Authenticate {
 
     static generateToken(email, id, isAdmin) {
-        return jwt.sign({ email, id, isAdmin }, process.env.SECRETKEY, { expiresIn: "3h" });
+        return jwt.sign({ email, id, isAdmin }, process.env.SECRETKEY, { expiresIn: "8h" });
     }
 
     static verifyToken(token) {
@@ -15,7 +15,7 @@ class Authenticate {
     }
 
     static encryptPassword(password) {
-        return bcrypt.hashSync(password, 10);
+        return bcrypt.hash(password, 10);
     }
 
     static verifyPassword(plainPassword, encryptedPassword) {
