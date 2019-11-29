@@ -40,7 +40,7 @@ class AuthValidator {
 
         const Schema = joi.object().keys({
             email: joi.string().email().label('Email').trim().required(),
-            password: joi.regex(/^[a-zA-Z0-9]{3,30}$/).label('Password').required(),
+            password: joi.string().regex(/^[a-zA-Z0-9]{3,30}$/).label('Password').required(),
         });
 
         const userChecker = {
