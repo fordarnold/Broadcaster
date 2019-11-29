@@ -3,7 +3,7 @@ node_js:
   - stable
 
 env:
-  - SECRETKEY=travisTestKey
+  - SECRETKEY=travisTestSecretKey
 
 cache:
   directories:
