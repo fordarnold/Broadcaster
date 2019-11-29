@@ -73,7 +73,7 @@ describe('API Endpoint: /api/v1/auth/signup', () => {
                 res.should.have.status(409);
                 res.body.should.have.property(
                     "error",
-                    "The email already exists"
+                    "The email for this user already exists"
                 );
                 done();
             });
