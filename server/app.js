@@ -1,6 +1,5 @@
 import express from "express"; // Express web framework
 import bodyParser from "body-parser"; // Handle HTTP POST requests with 'req.body' in Express framework (~https://stackoverflow.com/questions/38306569/what-does-body-parser-do-with-express)
-// const joi = require('joi'); // Data validation library for JS
 
 import routes from "./routes/routes.v1"; // Import API routes (v1)
 
@@ -16,7 +15,7 @@ app.use('/assets/uploads', express.static('uploads'));
  * -------------------------------------------------------------------
  */
 
-// app.use(routes);
+app.use(routes);
 
 // Default (landing) route
 app.get('/', (req, res) => {
@@ -29,7 +28,17 @@ app.get('/', (req, res) => {
 });
 
 // 404 error (missing) route
-app.use((req, res) => {
+app.get('*', (req, res) => {
+
+    res.status(404).json({ 
+    	status: 404,
+    	error: "API endpoint was not found" 
+    });
+
+});
+
+// 404 error (missing) route
+app.post('*', (req, res) => {
 
     res.status(404).json({ 
     	status: 404,
