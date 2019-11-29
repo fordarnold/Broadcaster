@@ -41,6 +41,38 @@ class UserController {
 
     static signIn(req, res) {
         
+        const hasAccount = User.userExists(req.body.email);
+
+        if (hasAccount) {
+            const passwordsMatch = Auth.checkPassword(
+                req.body.password,
+                hasAccount.password
+            );
+
+            if (passwordsMatch) {
+                return res.status(200).json({
+                    status: 200,
+                    message: 'User is successfully logged in',
+                    data: {
+                        token: Auth.generateToken(hasAccount.email, hasAccount.id, hasAccount.isAdmin),
+                        firstname: hasAccount.firstname,
+                        lastname: hasAccount.lastname,
+                        email: hasAccount.email,
+                        username: hasAccount.username,
+                    }
+                });
+            }
+
+            return res.status(401).json({
+                status: 401,
+                error: 'Wrong password',
+            });
+        }
+
+        return res.status(401).json({
+            status: 401,
+            error: 'Authentication failed',
+        });
     }
 };
 

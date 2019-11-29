@@ -132,7 +132,7 @@ describe('API Endpoint: /api/v1/auth/signin', () => {
                 res.should.have.status(401);
                 res.body.should.have.property(
                     "error",
-                    "Auth failed"
+                    "Authentication failed"
                 );
                 done();
             });
@@ -144,7 +144,7 @@ describe('API Endpoint: /api/v1/auth/signin', () => {
             .send({ email: sampleUsers[2].email, password: sampleUsers[2].password })
             .end((err, res) => {
                 res.should.have.status(401);
-                res.body.should.have.property("error", "Auth failed");
+                res.body.should.have.property("error", "Authentication failed");
                 done();
             });
     });
