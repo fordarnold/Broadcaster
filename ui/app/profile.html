@@ -44,34 +44,58 @@
                         <h1>User Profile</h1>
                     </div>
 
-                    <div id="profile-summary">
-                        <h3>User's Data Summary</h3>
-
-                        <ul>
-                            <li>Resolved: 12</li>
-                            <li>Pending: 12</li>
-                            <li>Rejected: 12</li>
+                    <div class="user-profile">
+                        <img class="avatar" src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTF_erFD1SeUnxEpvFjzBCCDxLvf-wlh9ZuPMqi02qGnyyBtPWdE-3KoH3s" alt="Ash" />
+                        <div class="username">Will Smith</div>
+                        <div class="bio">Senior Corruption Officer</div>
+                        <div class="description">I report malpractice to government institutions</div>
+                        <ul class="data">
+                            <li><span class="entypo-heart"> 127 <br>Resolved</span></li>
+                            <li><span class="entypo-eye"> 853 <br>Pending</span></li>
+                            <li><span class="entypo-user"> 311 <br>Rejected</span></li>
                         </ul>
                     </div>
 
                     <div id="profile-records">
                         <h3>User's Records</h3>
 
-                        <div class="card">
+                        <div class="card card--light">
+                            <img class="card__image" src="http://unsplash.it/250/100?image=20" alt="">
+                            <h2 class="card__title">Sample Test Incident</h2>
+                            <h5>Red-flag</h5>
+                            <p class="card__body">
+                                But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.
+                            </p>
+                            <ul class="inline-list">
+                                <li><a href="edit-record.html">edit</a></li>
+                                <li><a href="#" class="delete-item">delete</a></li>
+                            </ul>
+                        </div>
 
-                            <div class="incident-record-item">
-                                <h6 class="incident-type">Type: Red-flag / Intervention</h6>
-                                <p class="incident-title">Sample Title: Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                <ul>
-                                    <li><a href="#">show description</a></li>
-                                    <li><a href="edit-record.html">edit</a></li>
-                                    <li><a href="#" class="delete-item">delete</a></li>
-                                </ul>
-                                <div class="incident-description">
-                                    <p></p>
-                                </div>
-                            </div>
+                        <div class="card card--light">
+                            <img class="card__image" src="http://unsplash.it/250/100?image=55" alt="">
+                            <h2 class="card__title">Sample Test Incident</h2>
+                            <h5>Intervention</h5>
+                            <p class="card__body">
+                                Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure.
+                            </p>
+                            <ul class="inline-list">
+                                <li><a href="edit-record.html">edit</a></li>
+                                <li><a href="#" class="delete-item">delete</a></li>
+                            </ul>
+                        </div>
 
+                        <div class="card card--light">
+                            <img class="card__image" src="http://unsplash.it/250/100?image=83" alt="">
+                            <h2 class="card__title">Sample Test Incident</h2>
+                            <h5>Red-flag</h5>
+                            <p class="card__body">
+                                But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.
+                            </p>
+                            <ul class="inline-list">
+                                <li><a href="edit-record.html">edit</a></li>
+                                <li><a href="#" class="delete-item">delete</a></li>
+                            </ul>
                         </div>
                     </div>
 
@@ -79,6 +103,14 @@
 
             </div>
         </section>
+
+        <p><br></p>
+
+        <footer>
+            <div id="footer-copyright" class="text-center">
+                <p><small>Copyright &copy; 2019</small></p>
+            </div>
+        </footer>
 
         <!-- <script src="js/main.js"></script> -->
     </body>
