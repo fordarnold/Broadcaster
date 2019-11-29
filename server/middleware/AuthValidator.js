@@ -1,4 +1,4 @@
-import joi from '@hapi/joi';
+import joi from '@hapi/joi'; // Data validation library for JS
 
 import User from '../models/User';
 
@@ -15,7 +15,7 @@ class AuthValidator {
             phoneNumber: joi.string().min(3).max(40).label('Phone Number').trim().required(),
             username: joi.string().min(3).max(40).label('Username').trim().required(),
             isAdmin: joi.boolean().required(),
-            password: joi.string().label('Password').trim().required(),
+            password: joi.required()
         });
 
         const user = new User(req.body);
@@ -40,7 +40,7 @@ class AuthValidator {
 
         const Schema = joi.object().keys({
             email: joi.string().email().label('Email').trim().required(),
-            password: joi.string().regex(/^[a-zA-Z0-9]{3,30}$/).label('Password').trim().required(),
+            password: joi.regex(/^[a-zA-Z0-9]{3,30}$/).label('Password').required(),
         });
 
         const userChecker = {

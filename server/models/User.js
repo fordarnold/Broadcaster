@@ -1,4 +1,4 @@
-import Authenticate from '../helpers/authentication';
+import Authenticate from '../helpers/auth';
 
 // Add some sample users
 const users = [
