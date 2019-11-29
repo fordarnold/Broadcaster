@@ -10,3 +10,7 @@ npm-debug.log
 # https://github.com/jcunanan05/express-es6-sample/blob/for-article/.gitignore
 # https://www.freecodecamp.org/news/how-to-enable-es6-and-beyond-syntax-with-node-and-express-68d3e11fe1ab
 dist
+
+# Code coverage tools
+coverage
+.nyc_output
