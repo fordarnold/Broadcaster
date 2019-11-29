@@ -1,0 +1,307 @@
+/**
+ * Color Palette
+ * -------------
+ * - https://color.adobe.com/avo---bright-color-theme-10085604
+ * - https://paletton.com/#uid=50x0u0kmbqZcIEoi0uMqdnatPiq
+ * 
+ * #C5D4F1 (#6C88BE, #304F8D, #0C275D)
+ * #D7E0F2
+ * #CFD974
+ * #D2DC96
+ * #D78A42 (#934C0A, #B96A21, #F5AD6B, #FFCA9A)
+ *
+ */
+
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css?family=Signika&display=swap');
+
+/**
+ * ----------------------------------------------------
+ *
+ * GLOBAL STYLES
+ *
+ * ----------------------------------------------------
+ */
+
+/* Common Page Elements */
+body {
+	margin: 0;
+	padding: 0;
+	overflow-y: scroll;
+	background-color: #FFF;
+	background-image: url("../img/bg-pattern-clean-gray-paper.png");
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Typography */
+h1, h2, h3 {
+	font-family: 'Signika', serif;
+}
+
+/* Helper Style Classes */
+.text-center {
+	text-align: center;
+}
+
+/**
+ * ----------------------------------------------------
+ *
+ * RE-USABLE COMPONENTS
+ *
+ * ----------------------------------------------------
+ */
+
+.page-wrapper {
+	/* fit to center */
+	width: 50%;
+	margin: 0 auto;
+
+	padding-top: 50px;
+}
+
+.container {
+	width: 80%;
+	margin: auto;
+	overflow: hidden;
+}
+
+.box-50 {
+	width: 50%;
+}
+
+.box-50.centered {
+	margin: auto;
+}
+
+/* Buttons */
+/* https://codepen.io/finnhvman/pen/MQyJxV */
+.btn {
+	position: relative;
+    display: inline-block;
+    box-sizing: border-box;
+    border: none;
+	border-radius: 4px;
+    padding: 0 16px;
+    min-width: 64px;
+    height: 36px;
+    vertical-align: middle;
+    text-align: center;
+    text-overflow: ellipsis;
+    text-transform: uppercase;
+    background-color: #D78A42;
+    color: #FFF;
+    font-family: "Signika", sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 36px;
+    overflow: hidden;
+    outline: none;
+    cursor: pointer;
+    transition: box-shadow 0.2s;
+}
+
+.btn::-moz-focus-inner {
+    border: none;
+}
+
+.btn::before {
+	content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgb(255, 255, 255);
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.btn::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    border-radius: 50%;
+    padding: 50%;
+    width: 32px; /* Safari */
+    height: 32px; /* Safari */
+    background-color: rgb( 255, 255, 255);
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1);
+    transition: opacity 1s, transform 0.5s;
+}
+
+.btn:hover,
+.btn:focus {
+    box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+.btn:hover::before {
+    opacity: 0.08;
+}
+
+.btn:focus::before {
+    opacity: 0.24;
+}
+
+.btn:hover:focus::before {
+    opacity: 0.3;
+}
+
+/**
+ * ----------------------------------------------------
+ *
+ * PAGE AREAS
+ *
+ * ----------------------------------------------------
+ */
+
+/*-------------------------- Page Header -------------------------- */
+
+header {
+	background: #CFD974;
+	color: #934C0A;
+	padding-top: 15px;
+	min-height: 70px;
+	border-bottom: #D78A42 4px solid;
+	text-transform: uppercase;
+}
+
+header a {
+	color: #934C0A;
+	text-decoration: none;
+}
+
+header #brand {
+	text-transform: uppercase;
+}
+
+header #brand img, header #brand h1 {
+	float: left;
+}
+
+header #brand img {
+	padding-right: 20px;
+	width: 48px;
+	height: 48px;
+}
+
+header #brand h1 {
+	margin: 0;
+	margin-top: 8px;
+}
+
+header nav {
+	float: right;
+	margin-top: 18px;
+	font-family: 'Signika', serif;
+
+}
+
+header nav ul {
+	margin: 0;
+	padding: 0;
+}
+
+header nav ul li {
+	float: left;
+	display: inline;
+	padding: 0 10px;
+}	
+
+header nav ul li a:hover, header nav .active a {
+	color: #D78A42;
+}
+
+/*-------------------------- Page Content -------------------------- */
+
+#page-content {
+	margin-top: 20px;
+}
+
+/*-------------------------- Page Footer -------------------------- */
+
+footer {
+	margin-top: 20px;
+	padding: 10px;
+	background: #C5D4F1;
+}
+
+footer #footer-copyright {
+	font-weight: bold;
+}
+
+/*-------------------------- Showcase -------------------------- */
+
+#showcase {
+	min-height: 350px;
+	background: url('../img/bg-showcase.jpg') no-repeat 0 -60px;
+	background-size: cover;
+
+	text-align: center;
+}
+
+#showcase hgroup {
+	width: 80%;
+	margin: auto;
+	margin-top: 58px;
+	padding: 15px 0 30px 0;
+	border-radius: 5px;
+	background: #D7E0F2;
+	opacity: 0.7;
+	color: #934C0A;
+}
+
+#showcase hgroup h1 {
+	font-size: 2.5em;
+}
+
+#showcase hgroup h3 {
+	font-size: 1.7em;
+}
+
+/*-------------------------- Features -------------------------- */
+
+#features {
+	margin-top: 20px;
+}
+
+#features .box {
+	width: 31.4%;
+	float: left;
+	padding: 10px;
+	text-align: center;
+}
+
+#features .box img {
+	width: 80px;
+}
+
+/**
+ * -------------
+ *
+ * <FORM> STYLES
+ *
+ * -------------
+ */
+
+form {
+	padding: 20px 0;
+}
+
+form .input-group {
+	margin-bottom: 20px;
+}
+
+form .input-group label {
+	display: block;
+	margin-bottom: 5px;
+}
+
+form .input-group input {
+	width: 100%;
+	line-height: 30px;
+	border: 0;
+	border-bottom: 2px solid #CFD974;
+	text-indent: 5px;
+}
