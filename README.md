@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.com/fordarnold/Broadcaster.svg?branch=develop)](https://travis-ci.com/fordarnold/Broadcaster)
+[![Coverage Status](https://coveralls.io/repos/github/fordarnold/Broadcaster/badge.svg?branch=develop)](https://coveralls.io/github/fordarnold/Broadcaster?branch=develop)
 
 # Broadcaster
 
